@@ -4,17 +4,13 @@
 //
 //  Created by Phillip Todorov on 06/12/2020.
 //
-
 import Combine
+import Foundation
 
-class Goal {
+struct Goal {
 	var title: String
 	
-	init(
-		title: String = "Title"
-	){
+	init(title: String = "Title"){
 		self.title = title
 	}
-	
-	
 }

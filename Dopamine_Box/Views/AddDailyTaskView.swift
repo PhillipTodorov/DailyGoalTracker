@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct AddDailyTaskView: View {
-	@State var task: String
+	@ObservedObject var goal = Goal(title: "")
 	@Environment(\.presentationMode) var mode: Binding<PresentationMode>
 	@Binding var showSelf: Bool
-	@Binding var goal: Goal
+	@Environment var library: Library
 	
 	
 	var body: some View {
@@ -20,16 +20,19 @@ struct AddDailyTaskView: View {
 			HStack{
 				Text("Task:")
 					.bold()
-				TextField("New Task", text: $task)
+				TextField("New Task", text: $goal.title)
 			}
 			.frame(width: 300, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 			
 			Button(action: {
 				self.showSelf = false
-				self.goal.add(title:self.title)
 			}) {
 				Text("Confirm")
 				
+			}
+			
+			Button("Order this"){
+				self.goal.add(title: self.title)
 			}
 		}
 	}
@@ -39,6 +42,6 @@ struct AddDailyTaskView_Previews: PreviewProvider {
 	static let goal = Goal()
 	
 	static var previews: some View {
-		AddDailyTaskView(task: "", showSelf: .constant(true))
+		AddDailyTaskView(task: "", showSelf: .constant(true)).environmentObject(goal)
 	}
 }
