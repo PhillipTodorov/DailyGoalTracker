@@ -8,31 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-	@State var showDetail = false
-	
-	var body: some View{
-		List(Library().sortedGoal, id: \.title){ goal in
-			GoalRow(goal: goal)
+	var body: some View {
+		NavigationView{
+			MenuView()
+				.navigationBarItems(trailing: profileButton)
 		}
 	}
 	
-	struct GoalRow: View {
-		let goal: Goal
-		
-		Text(goal.title)
+	private var profileButton: some View {
+		Button(action: { }){
+
+		}
 	}
-	
-//    var body: some View {
-//		NavigationView{
-//			NavigationLink(destination: AddDailyTaskView(task: "", showSelf: $showDetail), isActive: $showDetail){
-//				Text("Add Daily Task")
-//			}
-//		}
-//	}
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+		Group{
+			ContentView()
+		}
     }
 }

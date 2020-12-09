@@ -7,7 +7,7 @@
 import Combine
 import Foundation
 
-struct Goal {
+class Goal: ObservableObject{
 	var title: String
 	
 	init(title: String = "Title"){

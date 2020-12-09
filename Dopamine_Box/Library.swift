@@ -8,16 +8,17 @@
 import Combine
 import Foundation
 
-final class Library {
+final class Library: ObservableObject {
 	var sortedGoal: [Goal] { goalsCache }
 	
 	
 	private var goalsCache: [Goal] = [
 		.init(title: "Go for a run"),
 		
+		
 	]
 	
-//	mutating func addNewBook(_ goal: Goal) {
-//		goalsCache.insert(goal, at: 0)
-//	}
+	func addNewGoal(_ goal: Goal) {
+		goalsCache.insert(goal, at: 0)
+	}
 }
