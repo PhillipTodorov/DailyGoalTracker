@@ -9,10 +9,11 @@ import SwiftUI
 //
 struct AddDailyTaskView: View {
 	
-	@ObservedObject var goal = Goal(title: "")
+	@ObservedObject var goal = Goal(title: "hello")
 //	@Environment(\.presentationMode) var mode: Binding<PresentationMode>
 //	@Binding var showSelf: Bool
-	@ObservedObject var library = Library()
+	@EnvironmentObject var library = Library() 
+	
 	
 	var body: some View{
 		VStack{
@@ -68,7 +69,7 @@ struct AddDailyTaskView_Previews: PreviewProvider {
 	static let library = Library()
 	
 	static var previews: some View {
-		AddDailyTaskView(library: library)
+		AddDailyTaskView()
 			.environmentObject(goal)
 			.environmentObject(library)
 	}

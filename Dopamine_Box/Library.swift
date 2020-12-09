@@ -12,8 +12,9 @@ final class Library: ObservableObject {
 	var sortedGoal: [Goal] { goalsCache }
 	
 	
-	private var goalsCache: [Goal] = [
+	@Published private var goalsCache: [Goal] = [
 		.init(title: "Go for a run"),
+		.init(title: "Go for a walk"),
 		
 		
 	]
@@ -21,4 +22,6 @@ final class Library: ObservableObject {
 	func addNewGoal(_ goal: Goal) {
 		goalsCache.insert(goal, at: 0)
 	}
+	
+	
 }

@@ -22,11 +22,7 @@ struct MenuView: View {
 					Text("Add Daily Task")
 				}
 			}
-			
-		
 		}
-		
-		
 	}
 	
 	struct GoalRow: View {
@@ -36,7 +32,9 @@ struct MenuView: View {
 			Text(goal.title)
 			}
 		}
-	}
+	
+	
+}
 		
 
 
