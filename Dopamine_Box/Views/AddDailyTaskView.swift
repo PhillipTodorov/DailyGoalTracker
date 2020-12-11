@@ -8,69 +8,38 @@
 import SwiftUI
 //
 struct AddDailyTaskView: View {
-	
-	@ObservedObject var goal = Goal(title: "hello")
-//	@Environment(\.presentationMode) var mode: Binding<PresentationMode>
-//	@Binding var showSelf: Bool
-	@EnvironmentObject var library = Library() 
-	
+	@ObservedObject var goal = Goal()
+	@EnvironmentObject var library: Library
+	@Environment(\.presentationMode) var mode: Binding<PresentationMode>
 	
 	var body: some View{
-		VStack{
-			Text("Add a task")
-			HStack{
-				Text("Task:")
-					.bold()
-				TextField("New Task", text: $goal.title)
+		NavigationView{
+			VStack {
+				HStack {
+					Text("Name")
+					TextField("Goal Name", text: $goal.title)
+					
+				}
 			}
-			.frame(width: 300, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-			
-
-			Button("Order this"){
-				self.library.addNewGoal(goal)
+			.toolbar{
+				ToolbarItem(placement: .status){
+					Button("Add to Library") {
+						library.addNewGoal(goal)
+						mode.wrappedValue.dismiss()
+					}
+					.disabled([goal.title].contains(where:\.isEmpty))
+				}
 			}
-
-		
-			
 		}
 	}
 }
-	
-//
-//
-//	var body: some View {
-//		VStack {
-//			Text("Add a task")
-//			HStack{
-//				Text("Task:")
-//					.bold()
-//				TextField("New Task", text: $goal.title)
-//			}
-//			.frame(width: 300, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-//
-//			Button(action: {
-//				self.showSelf = false
-//			}) {
-//				Text("Confirm")
-//
-//			}
-//
-//			Button("Order this"){
-//				self.goal.add(title: self.title)
-//			}
-//		}
-//	}
-//}
-//
+
 
 
 struct AddDailyTaskView_Previews: PreviewProvider {
-	static let goal = Goal(title: "")
-	static let library = Library()
-	
+
 	static var previews: some View {
 		AddDailyTaskView()
-			.environmentObject(goal)
-			.environmentObject(library)
+			.environmentObject(Library())
 	}
 }

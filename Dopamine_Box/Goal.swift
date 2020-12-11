@@ -8,9 +8,9 @@ import Combine
 import Foundation
 
 class Goal: ObservableObject{
-	var title: String
+	@Published var title: String
 	
-	init(title: String = "Title"){
+	init(title: String = ""){
 		self.title = title
 	}
 }

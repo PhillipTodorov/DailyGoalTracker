@@ -11,7 +11,7 @@ import SwiftUI
 struct Dopamine_BoxApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(Library())
         }
     }
 }

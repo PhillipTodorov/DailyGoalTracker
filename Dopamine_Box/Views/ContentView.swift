@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+	@EnvironmentObject var library: Library
+	
 	var body: some View {
 		NavigationView{
 			MenuView()
-				.navigationBarItems(trailing: profileButton)
 		}
-	}
-	
-	private var profileButton: some View {
-		Button(action: { }){
-
-		}
+		.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
 	}
 }
 
@@ -26,6 +22,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
 		Group{
 			ContentView()
+				.environmentObject(Library())
 		}
     }
 }

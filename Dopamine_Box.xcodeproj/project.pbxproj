@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A55F6EA32582B3440024D6FA /* GoalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55F6EA22582B3440024D6FA /* GoalViews.swift */; };
+		A55F6EAA2582E5FE0024D6FA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55F6EA92582E5FE0024D6FA /* DetailView.swift */; };
 		A568C8632576BB8700541C7E /* Dopamine_BoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A568C8622576BB8700541C7E /* Dopamine_BoxApp.swift */; };
 		A568C8652576BB8700541C7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A568C8642576BB8700541C7E /* ContentView.swift */; };
 		A568C8672576BB8B00541C7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A568C8662576BB8B00541C7E /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A55F6EA22582B3440024D6FA /* GoalViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViews.swift; sourceTree = "<group>"; };
+		A55F6EA92582E5FE0024D6FA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A568C85F2576BB8700541C7E /* Dopamine_Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dopamine_Box.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A568C8622576BB8700541C7E /* Dopamine_BoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dopamine_BoxApp.swift; sourceTree = "<group>"; };
 		A568C8642576BB8700541C7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,7 +88,9 @@
 			children = (
 				A568C8642576BB8700541C7E /* ContentView.swift */,
 				A57D5C0C25804B0A00211B58 /* MenuView.swift */,
+				A55F6EA92582E5FE0024D6FA /* DetailView.swift */,
 				A59CC61A2576C5F100E17288 /* AddDailyTaskView.swift */,
+				A55F6EA22582B3440024D6FA /* GoalViews.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,9 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A57D5C0D25804B0A00211B58 /* MenuView.swift in Sources */,
+				A55F6EAA2582E5FE0024D6FA /* DetailView.swift in Sources */,
 				A568C8652576BB8700541C7E /* ContentView.swift in Sources */,
 				A59CC623257D298F00E17288 /* Library.swift in Sources */,
 				A568C8632576BB8700541C7E /* Dopamine_BoxApp.swift in Sources */,
+				A55F6EA32582B3440024D6FA /* GoalViews.swift in Sources */,
 				A59CC626257D29A300E17288 /* Goal.swift in Sources */,
 				A59CC61B2576C5F100E17288 /* AddDailyTaskView.swift in Sources */,
 			);

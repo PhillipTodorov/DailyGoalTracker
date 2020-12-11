@@ -9,31 +9,28 @@ import SwiftUI
 
 struct MenuView: View {
 	@State var showDetail = false
+	@State var addingNewGoal = false
+	@EnvironmentObject var library: Library
+	
+	
 	
 	var body: some View{
-		
 		VStack {
-			List(Library().sortedGoal, id: \.title){ goal in
-				GoalRow(goal: goal)
+			List(library.sortedGoal, id: \.title){ goal in
+				Goal.GoalRow(goal: goal)
 			}
+		
+//			Button{
+//				addingNewGoal = true
+//			} label: {
+//				Text("Add daily task")
+//			}
 			
-			List{
-				NavigationLink(destination: AddDailyTaskView(), isActive: $showDetail){
-					Text("Add Daily Task")
-				}
+			NavigationLink(destination: AddDailyTaskView()){
+				Text("Add Daily Task")
 			}
 		}
 	}
-	
-	struct GoalRow: View {
-		let goal: Goal
-		
-		var body: some View{
-			Text(goal.title)
-			}
-		}
-	
-	
 }
 		
 
@@ -41,5 +38,9 @@ struct MenuView: View {
 struct MenuView_Previews: PreviewProvider {
 	static var previews: some View {
 		MenuView()
+			.environmentObject(Library())
 	}
 }
+
+
+
