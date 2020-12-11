@@ -20,7 +20,7 @@ class Library: ObservableObject {
 	@Published private var goalsCache: [Goal] = [
 		.init(title: "Go for a run"),
 		.init(title: "Do 1 hr of reading"),
-		.init(title: "Eat ass"),
+		.init(title: "Eat cod liver tablets"),
 		.init(title: "Make lunch"),
 		.init(title: "Do 3 hrs of coding"),
 		.init(title: "1 hr learning the piano"),
