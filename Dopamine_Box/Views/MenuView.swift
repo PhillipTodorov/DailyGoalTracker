@@ -19,12 +19,6 @@ struct MenuView: View {
 			List(library.sortedGoal, id: \.title){ goal in
 				Goal.GoalRow(goal: goal)
 			}
-		
-//			Button{
-//				addingNewGoal = true
-//			} label: {
-//				Text("Add daily task")
-//			}
 			
 			NavigationLink(destination: AddDailyTaskView()){
 				Text("Add Daily Task")

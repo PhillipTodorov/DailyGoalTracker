@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//
+
 struct AddDailyTaskView: View {
 	@ObservedObject var goal = Goal()
 	@EnvironmentObject var library: Library
@@ -18,7 +18,6 @@ struct AddDailyTaskView: View {
 				HStack {
 					Text("Name")
 					TextField("Goal Name", text: $goal.title)
-					
 				}
 			}
 			.toolbar{

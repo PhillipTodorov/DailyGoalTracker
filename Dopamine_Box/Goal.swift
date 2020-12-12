@@ -10,7 +10,7 @@ import Foundation
 class Goal: ObservableObject{
 	@Published var title: String
 	
-	init(title: String = ""){
+	init(title: String = "title"){
 		self.title = title
 	}
 }

@@ -24,10 +24,5 @@ class Library: ObservableObject {
 		.init(title: "Make lunch"),
 		.init(title: "Do 3 hrs of coding"),
 		.init(title: "1 hr learning the piano"),
-		
-		
 	]
-	
-	
-	
 }

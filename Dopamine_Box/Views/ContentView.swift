@@ -23,6 +23,7 @@ struct ContentView_Previews: PreviewProvider {
 		Group{
 			ContentView()
 				.environmentObject(Library())
+				.previewLayout(.fixed(width: 896, height: 414))
 		}
     }
 }
