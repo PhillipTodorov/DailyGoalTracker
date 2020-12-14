@@ -15,13 +15,16 @@ struct MenuView: View {
 	
 	
 	var body: some View{
-		VStack {
-			List(library.sortedGoal, id: \.title){ goal in
-				Goal.GoalRow(goal: goal)
-			}
-			
-			NavigationLink(destination: AddDailyTaskView()){
-				Text("Add Daily Task")
+			VStack {
+				List(library.sortedGoal, id: \.title){ goal in
+					HStack {
+						Goal.GoalRow(goal: goal)
+						doneButton(goal: goal)
+					}
+				}
+				
+				NavigationLink(destination: AddDailyTaskView()){
+					Text("Add Daily Task")
 			}
 		}
 	}

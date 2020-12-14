@@ -8,6 +8,12 @@
 import Combine
 import Foundation
 
+
+enum Section: CaseIterable {
+  case readMe
+  case finished
+}
+
 class Library: ObservableObject {
 	var sortedGoal: [Goal] { goalsCache }
 	
@@ -15,6 +21,13 @@ class Library: ObservableObject {
 	/// Add a new goal at the start of the library
 	func addNewGoal(_ goal: Goal) {
 		goalsCache.insert(goal, at: 0)
+	}
+	
+	/// Deletes the selected goal
+	func deleteBooks(goal:Goal) {
+		if let index = goalsCache.firstIndex(of: goal) {
+			goalsCache.remove(at: index)
+		}
 	}
 	
 	@Published private var goalsCache: [Goal] = [
