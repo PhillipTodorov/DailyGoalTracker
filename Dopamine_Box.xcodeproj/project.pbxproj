@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5595E7925B489E800233208 /* RoundedSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5595E7825B489E800233208 /* RoundedSquare.swift */; };
 		A55F6EA32582B3440024D6FA /* GoalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55F6EA22582B3440024D6FA /* GoalViews.swift */; };
 		A55F6EAA2582E5FE0024D6FA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55F6EA92582E5FE0024D6FA /* DetailView.swift */; };
 		A568C8632576BB8700541C7E /* Dopamine_BoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A568C8622576BB8700541C7E /* Dopamine_BoxApp.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5595E7825B489E800233208 /* RoundedSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSquare.swift; sourceTree = "<group>"; };
 		A55F6EA22582B3440024D6FA /* GoalViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViews.swift; sourceTree = "<group>"; };
 		A55F6EA92582E5FE0024D6FA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A568C85F2576BB8700541C7E /* Dopamine_Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dopamine_Box.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5595E7725B489CE00233208 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A5595E7825B489E800233208 /* RoundedSquare.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		A568C8562576BB8700541C7E = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 				A57D5C0C25804B0A00211B58 /* MenuView.swift */,
 				A55F6EA92582E5FE0024D6FA /* DetailView.swift */,
 				A59CC61A2576C5F100E17288 /* AddDailyTaskView.swift */,
+				A5595E7725B489CE00233208 /* Assets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +183,7 @@
 				A55F6EA32582B3440024D6FA /* GoalViews.swift in Sources */,
 				A59CC626257D29A300E17288 /* Goal.swift in Sources */,
 				A59CC61B2576C5F100E17288 /* AddDailyTaskView.swift in Sources */,
+				A5595E7925B489E800233208 /* RoundedSquare.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

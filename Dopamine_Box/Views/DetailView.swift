@@ -34,6 +34,7 @@ struct DetailView: View {
 			}
 			.padding()
 		}
+		
 	}
 }
 
