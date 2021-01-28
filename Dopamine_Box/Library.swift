@@ -17,7 +17,6 @@ enum Section: CaseIterable {
 class Library: ObservableObject {
 	var sortedGoal: [Goal] { goalsCache }
 	
-	
 	/// Add a new goal at the start of the library
 	func addNewGoal(_ goal: Goal) {
 		goalsCache.insert(goal, at: 0)
@@ -29,9 +28,21 @@ class Library: ObservableObject {
 			goalsCache.remove(at: index)
 		}
 	}
+
+	func count() -> Int {
+		return goalsCache.count
+	}
+	
+//	mutating func numberOfDoneGoals() -> Int {
+//		let goalsDone = goalsCache.filter(){$0.done == true}.count
+//
+//		return goalsDone
+//
+//	}
+	
 	
 	@Published private var goalsCache: [Goal] = [
-		.init(title: "Go for a run"),
+		.init(title: "Go for a run",done: false),
 		.init(title: "Do 1 hr of reading"),
 		.init(title: "Eat cod liver tablets"),
 		.init(title: "Make lunch"),

@@ -16,7 +16,6 @@ extension Goal{
 			NavigationLink(
 				destination: DetailView(goal: goal)
 			){
-				
 				Text(goal.title)
 			}
 		}
@@ -30,6 +29,9 @@ extension Goal{
 				ZStack{
 					RoundedSquare()
 					VStack{
+						
+						
+						
 						Text(goal.title)
 							.foregroundColor(Color.white)
 							.fontWeight(.bold)
@@ -44,6 +46,7 @@ extension Goal{
 }
 
 struct doneButton: View {
+	
 	@ObservedObject var goal: Goal
 	
 	var body: some View{
@@ -51,18 +54,18 @@ struct doneButton: View {
 		//		@TODO: find a better image to represent a complete task
 		let bookmark = "circle"
 		
-	
-		var button = Button{
+		
+		let button = Button{
 			goal.done.toggle()
 		} label:{
 			Image(systemName: goal.done ? "\(bookmark).fill" : bookmark )
 				.resizable()
 				.frame(width: 50, height: 50)
-				
-				
+			
+			
 			goal.done ? Text("Done")
 				.fontWeight(.bold)
-				 : Text("Not done")
+				: Text("Not done")
 				.fontWeight(.bold)
 		}
 		

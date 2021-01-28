@@ -17,27 +17,25 @@ struct AddDailyTaskView: View {
 	}
 	
 	var body: some View{
-		NavigationView{
-			ZStack{
-				Rectangle()
-					.fill((LinearGradient(gradient:Gradient(colors: [Color(red: 224.0 / 255, green: 137.0 / 255, blue: 99.0 / 255),Color(red: 255.0 / 255, green: 191.0 / 255, blue: 163.0 / 255)]), startPoint: .top, endPoint: .bottom)))
-					.ignoresSafeArea(.all)
-				
-				VStack {
-					HStack {
-						Text("Name")
-						TextField("Goal Name", text: $goal.title)
-					}
+		ZStack{
+			Rectangle()
+				.fill((LinearGradient(gradient:Gradient(colors: [Color(red: 224.0 / 255, green: 137.0 / 255, blue: 99.0 / 255),Color(red: 255.0 / 255, green: 191.0 / 255, blue: 163.0 / 255)]), startPoint: .top, endPoint: .bottom)))
+				.ignoresSafeArea(.all)
+			
+			VStack {
+				HStack {
+					Text("Name")
+					TextField("Goal Name", text: $goal.title)
 				}
-				.toolbar{
-					ToolbarItem(placement: .status){
-						Button("Add to Library") {
-							library.addNewGoal(goal)
-							mode.wrappedValue.dismiss()
-						}
-						.disabled([goal.title].contains(where:\.isEmpty))
-						
+			}
+			.toolbar{
+				ToolbarItem(placement: .status){
+					Button("Add to Library") {
+						library.addNewGoal(goal)
+						mode.wrappedValue.dismiss()
 					}
+					.disabled([goal.title].contains(where:\.isEmpty))
+					
 				}
 			}
 		}
